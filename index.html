@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KS Ai Inventory - Product Checker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="app.js" defer></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen font-sans">
+
+    <nav class="sticky top-0 z-50 bg-slate-800 border-b border-slate-700 shadow-lg p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
+            KS AI <span class="text-xs text-slate-400">Checker</span>
+        </h1>
+        <button id="lang-toggle" class="text-sm border border-slate-600 px-3 py-1 rounded hover:bg-slate-700 transition">
+            🇬🇧 / 🇲🇲
+        </button>
+    </nav>
+
+    <header class="p-4 space-y-4 max-w-md mx-auto">
+        <div class="relative">
+            <input type="text" id="search-input" placeholder="Search products..." 
+                class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 focus:ring-2 focus:ring-blue-500 outline-none transition placeholder-slate-500">
+        </div>
+
+        <div class="flex gap-2 overflow-x-auto pb-2">
+            <select id="category-filter" class="bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-sm outline-none">
+                <option value="all" data-i18n="all_cats">All Categories</option>
+                <option value="PG Soft">PG Soft</option>
+                <option value="Pragmatic Play">Pragmatic Play</option>
+                <option value="NetEnt">NetEnt</option>
+            </select>
+            
+            <button id="high-rating-btn" class="flex-shrink-0 bg-slate-800 border border-slate-700 px-4 py-2 rounded-lg text-sm hover:bg-slate-700 transition flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                <span data-i18n="high_rating">Rating 97%+</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="results-container" class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-20">
+        <div class="text-center text-slate-500 col-span-full py-10">Loading data...</div>
+    </main>
+
+    <a href="admin.html" class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-500 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+    </a>
+
+</body>
+</html>
